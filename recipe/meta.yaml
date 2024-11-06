@@ -1,5 +1,5 @@
 {% set name = "py3nvml" %}
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/fbcotter/py3nvml/archive/{{ version }}.tar.gz
-  sha256: e373d638b9cf0bf314d42b56e4875cf73123962072880c3b4b16791ab078ae12
+  sha256: 55cdd578973b1cad706bf28dc18c40902dae35acefea49d89f94a3053f5c3dec
 
 build:
-  number: 4
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
