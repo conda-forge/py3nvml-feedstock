@@ -11,18 +11,20 @@ source:
 
 build:
   number: 5
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
-    - python
-    - enum34      # [py < 34]
+    - python >={{ python_min }}
     - xmltodict
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - py3nvml
 
